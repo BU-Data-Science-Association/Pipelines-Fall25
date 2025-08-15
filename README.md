@@ -17,10 +17,12 @@ Data Pipelines through Apache Spark &amp; Databricks
         - Click on the url with the name station_status and click into stations to see the real data we’re gonna be reading in
 - So now we want to write a schema to match this data
     - Using only the main fields we care about
+  
 **Extract**
 - Type out requests.get(URL, timeout=10)
 - Data = response.json(), print that out, try running - if that works then we have data
 - Also station_information to get names, keep just name and id
+  
 **Transform**
 - Stations_data to get into the list we want
 - Now we add an ingestion timestamp to every station
@@ -28,12 +30,13 @@ Data Pipelines through Apache Spark &amp; Databricks
 - Add some calculated columns, typed out with withColumn
 - Run a .show(truncate=False) to show something is happening
 - Create stats as an aggregated view of the whole system
+  
 **Load**
 - Convert processed_df to pandas, and then to pyArrow, then write Parquet to buffer, then boot up boto3 with the same credentials
 - Then the line to actually put the object in the bucket
 - Check supabase to ensure this worked
 - Write stats table to memory on databricks as delta table
-
+  
 **SQL/Dashboard**
 - Go into SQL Editor and notice how you can do SELECT * FROM bluebikes_stats
 - Dashboards > Create Dashboard - click the line graph icon at the bottom to add a visual, and either ask the AI or do it yourself - we want a line graph where the x axis is ingestion time and the y axis is - utilization rate - this gives us a live tracker of the peaks and troughs of bluebike usage
