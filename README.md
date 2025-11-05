@@ -40,7 +40,7 @@ Data Pipelines through Apache Spark &amp; Databricks
 - Write stats table to memory on databricks as delta table
   
 **SQL/Dashboard**
-- Go into SQL Editor and notice how you can do SELECT * FROM bluebikes_stats
+- Go into SQL Editor in Databricks and notice how you can do SELECT * FROM bluebikes_stats
 - Dashboards > Create Dashboard - click the line graph icon at the bottom to add a visual, and either ask the AI or do it yourself - we want a line graph where the x axis is ingestion time and the y axis is - utilization rate - this gives us a live tracker of the peaks and troughs of bluebike usage
 - Play around a little with the size and turn the y axis to having specific boundaries
 
