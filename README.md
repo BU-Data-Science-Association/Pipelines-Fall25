@@ -6,6 +6,8 @@ Data Pipelines through Apache Spark &amp; Databricks
 - Create an account on Databricks Free Edition - would recommend personal email but school is probably fine
     - New > Notebook to create a notebook
     - Copy over imports and spark season builder from the given ode
+    - Switch the environment version to 2 (for whatever reason S3 doesn't work on version 4)
+        - Press where it says connected, hover over that box, and then click configuration. In there you can switch the version
 - Create or Open your Supabase Account
     - Go to storage > New Bucket - call it whatever (probably “bluebikes”)
     - In the Storage menu, go to Configuration > Settings
