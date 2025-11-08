@@ -10,7 +10,7 @@ Data Pipelines through Apache Spark &amp; Databricks
         - Use the *pipelines_incomplete.ipynb* to follow along for coding, or *pipelines_workshop* if you just want to observe.
         - See the notification of the new notebook created in the top right. Click on the link on the notebook name.
     - **Make sure the environment is in version 2**-- AWS S3 doesn't work on version 4.
-    -     Go to the right side and click on the environment (a symbol with two lines and circles) and set the environment version to 2 in the drop-down. 
+        - Go to the right side and click on the environment (a symbol with two lines and circles) and set the environment version to 2 in the drop-down. 
 3. **Open your Supabase Account** or create one if you don't have one. 
     - Create a new bucket
         - Go to storage > New Bucket - call it whatever (probably “bluebikes”)
