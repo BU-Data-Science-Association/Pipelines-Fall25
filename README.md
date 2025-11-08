@@ -1,28 +1,32 @@
 # Pipelines-Fall25
 Data Pipelines through Apache Spark &amp; Databricks
 
+Note: On Mac, Chrome (not Safari) is the preferred browser for this project as it will help with formatting, although either should work perfectly fine.
 
 ### Instructions
 1. **Clone this to your local machine.** Please notify us if you need any help!
 2. **Create an account on Databricks Free Edition.** Personal email is recommended for the account, but school email works as well.
-    - New > Notebook to **create a new notebook**
-    - File > Import > browse from local files.
+    - **Create the notebook**
+        - to New > Notebook
+        - File > Import > browse from local files.
         - Use the *pipelines_incomplete.ipynb* to follow along for coding, or *pipelines_workshop* if you just want to observe.
         - See the notification of the new notebook created in the top right. Click on the link on the notebook name.
     - **Make sure the environment is in version 2**-- AWS S3 doesn't work on version 4.
         - Go to the right side and click on the environment (a symbol with two lines and circles) and set the environment version to 2 in the drop-down. 
 3. **Open your Supabase Account** or create one if you don't have one. 
-    - Create a new bucket
-        - Go to storage > New Bucket - call it whatever (probably “bluebikes”)
-    - In the Storage menu, go to Configuration > Settings
-        - Copy the endpoint, but only from after the // to the supabase.co into the 
-        - Copy the access key and secret key into the proper spots in the python
-- Explain the data: https://bluebikes.com/system-data
-    - Go to realtime data -> click “Get Bluebikes’ GBFS feed here”
-        - This shows the json file/raw data that we’re working with which is a snapshot of the bluebikes system updated every minute
-        - Click on the url with the name station_status and click into stations to see the real data we’re gonna be reading in
-- So now we want to write a schema to match this data
-    - Using only the main fields we care about
+    - **Create a new bucket:**
+        - Go to storage > New bucket - give it a name (probably “bluebikes”)
+    - **Get the endpoint and access keys**.
+        - In the Storage menu, go to Configuration > Settings
+        - Copy the endpoint, but *only from after the // to the supabase.co*. We have already hard-coded the other elements into the ipynb.
+        - Copy the access key and secret key into the proper spots in the ipynb file.
+4. **Write a schema for the data**
+    - Let's look back at the data. Go to https://bluebikes.com/system-data.
+        - For Mac users, Chrome is recommended as it comes with "Pretty-print" for the JSON files while Safari does not.
+        - Scroll down to "Real-time Data" -> click “Get Bluebikes’ GBFS feed."
+        - This shows the JSON file/raw data that we’re working with, which is a snapshot of the bluebikes system updated every minute.
+        - Click on the url with the name *station_status* and click into stations to see the real data we’re gonna be reading in.
+    - Write a schema to match the data using *only* the main fields that we care about.
   
 **Extract**
 - Type out requests.get(URL, timeout=10)
