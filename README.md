@@ -19,7 +19,7 @@ Note: On Mac, Chrome (not Safari) is the preferred browser for this project as i
     - **Get the endpoint and access keys**.
         - In the Storage menu, go to Configuration > Settings
         - Copy the endpoint, but *only from after the // to the supabase.co*. We have already hard-coded the other elements into the ipynb.
-        - Copy the access key and secret key into the proper spots in the ipynb file.
+        - Copy the access key and secret key into the proper spots in the ipynb file. Be careful as you will have to make new keys if you lose the secret keys.
 4. **Write a schema for the data**
     - Let's look back at the data. Go to https://bluebikes.com/system-data.
         - For Mac users, Chrome is recommended as it comes with "Pretty-print" for the JSON files while Safari does not.
