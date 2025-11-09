@@ -61,12 +61,11 @@ Workshop Note: On Mac, Chrome (not Safari) is the preferred browser for this pro
     - Then start it going
   
 7. **Run SQL and Create a Dashboard**
-- **Run an SQL query**
-    - Go into SQL Editor in Databricks and notice how you can do *SELECT * FROM bluebikes_stats*
-- **Create a dasbboard**
-    - Dashboards > Create Dashboard - click the line graph icon at the bottom to add a visual, and either ask the AI or do it yourself - we want a line graph where the x axis is ingestion time and the y axis is - utilization rate - this gives us a live tracker of the peaks and troughs of bluebike usage
+    - Dashboards > Create Dashboard
+    - Go to "Data" on the top right and put in an SQL query: *SELECT * FROM bluebikes_stats*
+        - click the line graph icon at the bottom to add a visual, and either ask the AI or do it yourself - we want a line graph where the x axis is ingestion time and the y axis is - utilization rate - this gives us a live tracker of the peaks and troughs of bluebike usage
     - Play around a little with the size and turn the y axis to having specific boundaries
 
-**YOU DID IT!! BE PROUD OF YOURSELF! :D**
+**YOU DID IT!! BE PROUD OF YOURSELF, MY FUTURE DATA SCIENTISTS AND DATA ENGINGEERS! :D**
 
 
