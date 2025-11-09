@@ -1,7 +1,11 @@
 # Pipelines-Fall25
 Data Pipelines through Apache Spark &amp; Databricks
 
-Note: On Mac, Chrome (not Safari) is the preferred browser for this project as it will help with formatting, although either should work perfectly fine.
+This workshop would not be possible without our wonderful head of technical staff, Sam. (Freshmen, you will get to meet him next semester.) 
+
+Amanda added the finishing touches. 
+
+Workshop Note: On Mac, Chrome (not Safari) is the preferred browser for this project as it will help with formatting, although either should work perfectly fine.
 
 ### Instructions
 1. **Clone this to your local machine.** Please notify us if you need any help!
@@ -27,6 +31,7 @@ Note: On Mac, Chrome (not Safari) is the preferred browser for this project as i
         - This shows the JSON file/raw data that we’re working with, which is a snapshot of the bluebikes system updated every minute.
         - Click on the url with the name *station_status* and click into stations to see the real data we’re gonna be reading in.
     - Write a schema to match the data using *only* the main fields that we care about.
+5. **ETL**
   
 **Extract**
 - Type out requests.get(URL, timeout=10)
@@ -46,14 +51,22 @@ Note: On Mac, Chrome (not Safari) is the preferred browser for this project as i
 - Then the line to actually put the object in the bucket
 - Check supabase to ensure this worked
 - Write stats table to memory on databricks as delta table
+
+6. **Do "Streaming" (Really Frequent Batch Processing)**
+- **Create a pipeline**
+    - Jobs & Pipelines > Create Job
+    - Under the task stuff, name it whatever, set the path to your notebook (if should come up).
+    - **Add a trigger** Set the schedule (Add Trigger) to continuous - it will run approximately every 30 seconds after the first few minutes (by few it may mean 30)
+    - Make sure compute is serverless
+    - Then start it going
   
-**SQL/Dashboard**
-- Go into SQL Editor in Databricks and notice how you can do SELECT * FROM bluebikes_stats
+7. **Run SQL and Create a Dashboard**
+- **Run an SQL query**
+    - Go into SQL Editor in Databricks and notice how you can do *SELECT * FROM bluebikes_stats*
+- **Create a dasbboard**
 - Dashboards > Create Dashboard - click the line graph icon at the bottom to add a visual, and either ask the AI or do it yourself - we want a line graph where the x axis is ingestion time and the y axis is - utilization rate - this gives us a live tracker of the peaks and troughs of bluebike usage
 - Play around a little with the size and turn the y axis to having specific boundaries
 
-**Streaming/Fake Streaming**
-- Jobs & Pipelines > Create Job
-- Under the task stuff, name it whatever, set the path to your notebook (if should come up). Set the schedule (Add Trigger) to continuous - it will run approximately every 30 seconds after the first few minutes (by few it may mean 30)
-- Make sure compute is serverless
-- Then start it going
+**YOU DID IT!! BE PROUD OF YOURSELF! :D**
+
+
